@@ -72,7 +72,7 @@ Then you can make a simple API call. This will list the user's accounts availabl
 	try {
 		$accounts = $wepay->request('account/find');
 		foreach ($accounts as $account) {
-			echo "<a href=\"$account->account_uri\">$account->name</a>: $account->description <br />";
+			echo $account->name</a> . ': ' . $account->description "<br />";
 		}
 	}
 	catch (WePayException $e) {
